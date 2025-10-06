@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oathkeeper</title>
+    <icon></icon>
+    <link rel="stylesheet" href = "login.css">
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- Placeholder for logo -->
+                <div style="width: 50px; height: 50px; background-color: var(--accent-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--dark-color);">C</div>
+                <h1>Circus of <span>Wonders</span></h1>
+            </div>
+            
+            <button class="mobile-menu-btn">☰</button>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-secondary">Login</a>
+                <a href="#" class="btn">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Header -->
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Please login to your account</p>
+            </div>
+
+            <!-- User Type Selection -->
+            <div class="user-type-selector">
+                <div class="user-type-tabs">
+                    <button class="user-tab active" data-user-type="student">Student</button>
+                    <button class="user-tab" data-user-type="teacher">Teacher</button>
+                    <button class="user-tab" data-user-type="admin">Admin</button>
+                    <button class="user-tab" data-user-type="parent">Parent</button>
+                </div>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="login-form">
+                <!-- Dynamic fields based on user type -->
+                <div id="formFields">
+                    <!-- Fields will be injected here by JavaScript -->
+                </div>
+
+                <!-- Remember Me & Forgot Password -->
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="login-btn">
+                    <span class="btn-text">Sign In</span>
+                    <div class="btn-loader" style="display: none;">
+                        <div class="spinner"></div>
+                    </div>
+                </button>
+
+                <!-- Additional Options -->
+                <div class="additional-options">
+                    <div class="divider">
+                        <span>Or continue with</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button type="button" class="social-btn google">
+                            <img src="google-icon.svg" alt="Google">
+                            Google
+                        </button>
+                        <button type="button" class="social-btn microsoft">
+                            <img src="microsoft-icon.svg" alt="Microsoft">
+                            Microsoft
+                        </button>
+                    </div>
+
+                    <div class="signup-link">
+                        Don't have an account? <a href="#" id="signupLink">Sign up</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Circus of Wonders</h3>
+                    <p>The traveling city that never sleeps. Our grievance tracker keeps our infrastructure running as smoothly as our performances.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#stats">Statistics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">User Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Email: grievances@circusofwonders.com</li>
+                        <li>Office: Manager's Caravan, Center Ring Master</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p> 2025 Circus of Wonders Grievance Tracker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src = "./script.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+</body>
+</html>
