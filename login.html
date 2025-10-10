@@ -22,7 +22,7 @@
             
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#stats">Stats</a></li>
@@ -38,73 +38,21 @@
     </header>
 
     <div class="login-container">
-        <div class="login-card">
-            <!-- Header -->
-            <div class="login-header">
-                <h2>Welcome Back</h2>
-                <p>Please login to your account</p>
-            </div>
+       
+      <form>
+        <h2>Login</h2> 
+         <div class="input"><label for="username">Username</label>
+         <input type="text" id="username" name="username" placeholder="Enter Username" required></input></div>
+         <div class="input"><label for="password">Password</label>
+         <input type="text" id="password" name="password" placeholder="Password" required></input> </div>
+         <button type="submit">Login</button>
+         <p class="register-link">
+        Don’t have an account? <a href="register.html">Register</a> </p>
+      </form>
+    </div>
+    <script src = "./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-            <!-- User Type Selection -->
-            <div class="user-type-selector">
-                <div class="user-type-tabs">
-                    <button class="user-tab active" data-user-type="student">Student</button>
-                    <button class="user-tab" data-user-type="teacher">Teacher</button>
-                    <button class="user-tab" data-user-type="admin">Admin</button>
-                    <button class="user-tab" data-user-type="parent">Parent</button>
-                </div>
-            </div>
-
-            <!-- Login Form -->
-            <form id="loginForm" class="login-form">
-                <!-- Dynamic fields based on user type -->
-                <div id="formFields">
-                    <!-- Fields will be injected here by JavaScript -->
-                </div>
-
-                <!-- Remember Me & Forgot Password -->
-                <div class="form-options">
-                    <label class="remember-me">
-                        <input type="checkbox" id="rememberMe">
-                        <span class="checkmark"></span>
-                        Remember me
-                    </label>
-                    <a href="#" class="forgot-password">Forgot Password?</a>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="login-btn">
-                    <span class="btn-text">Sign In</span>
-                    <div class="btn-loader" style="display: none;">
-                        <div class="spinner"></div>
-                    </div>
-                </button>
-
-                <!-- Additional Options -->
-                <div class="additional-options">
-                    <div class="divider">
-                        <span>Or continue with</span>
-                    </div>
-                    
-                    <div class="social-login">
-                        <button type="button" class="social-btn google">
-                            <img src="google-icon.svg" alt="Google">
-                            Google
-                        </button>
-                        <button type="button" class="social-btn microsoft">
-                            <img src="microsoft-icon.svg" alt="Microsoft">
-                            Microsoft
-                        </button>
-                    </div>
-
-                    <div class="signup-link">
-                        Don't have an account? <a href="#" id="signupLink">Sign up</a>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-    <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
@@ -147,10 +95,5 @@
             </div>
         </div>
     </footer>
-
-    <script src = "./script.js">
-    </script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
 </body>
 </html>
