@@ -1,4 +1,3 @@
-// simple_server.js
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
@@ -25,7 +24,7 @@ app.use(express.static("public"));
 
 // Home route
 app.get("/", (req, res) => {
-  res.sendFile(__dirname+"/public/index.html");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 // Register user
@@ -40,7 +39,7 @@ app.post("/register.html", async (req, res) => {
     );
 
     if (checkResult.rows.length > 0) {
-      return res.sendFile(__dirname + "/public/register.html");
+      return res.render("register" , {para : "You have already registered.Please Login"});
     }
 
     // Hash password
@@ -53,10 +52,7 @@ app.post("/register.html", async (req, res) => {
       [username, email, hashedPassword]
     );
 
-    res.json({ 
-      success: true, 
-      message: "User registered successfully" 
-    });
+    res.sendFile(__dirname+"/public/citizen_dashboard.html");
 
   } catch (err) {
     console.log(err);
