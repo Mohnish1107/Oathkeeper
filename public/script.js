@@ -1,5 +1,4 @@
 // Mobile Menu Toggle
-        alert("Server is On");
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             document.querySelector('nav').classList.toggle('active');
         });
@@ -41,4 +40,5 @@
             statItems.forEach(item => {
                 observer.observe(item);
             });
+
         });
